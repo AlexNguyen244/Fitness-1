@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Fitness tracker stage 1</title>
+    <link href="reset.css" rel="stylesheet" type="text/css" />
+    <link href="examples.css" rel="stylesheet" type="text/css" />
+    <script defer src="examples.js"></script>
+  </head>
+
+  <BODY>
+    <main>
+      <div class="topbar">
+        <h1> Fitness Log </h1>
+      </div>
+
+      <div class="container">
+        <h2> Welcome back,
+        <br> Joey! </h2>
+      </div>
+
+      <div class="imageWrap">
+        <img src="header image.png"/>
+      </div>
+
+      <div class="question"> 
+        <h3> What activity session are you logging? </h3>
+      </div>
+
+      <div class="boxes">
+        <h4> Past Activity </h4>
+        <section id="bluebox"> 
+          <button class="button1" onclick="button1()"> Add New Activity </button>
+        </section>
+              
+        <section id="bluebox2">
+            <div class="row">
+              <div class="column">
+                <h5> Date </h5>
+                <input id="date-id" class="datestyle" type="date">
+              </div>
+              <h11> Activity </h11>
+              <div class="selectstyle">
+                <select id="select-id" onchange="change()">
+                  <option value ="Walk"> Walk</option> 
+                  <option value ="Run"> Run</option> 
+                  <option value ="Swim"> Swim</option> 
+                  <option value ="Bike"> Bike</option> 
+                  <option value ="Yoga"> Yoga</option> 
+                  <option value ="Soccer"> Soccer</option> 
+                  <option value ="Basketball"> Basketball</option> 
+                </select>
+              </div>
+              <h8> for </h8>
+              <h9> Time/Distance </h9>
+              <input id="time-distance" class="time-distance-style" type="number" onchange="change()" min="0" step="0.1">
+              <h10> Units </h10>
+              <input id="units" class="unitstyle" type="text" onchange="change()" readonly>
+              <div class="column">
+                <button id="submit-button" class="submit" name="submit" onclick="submit()"> Submit </button>
+              </div>
+            </div>
+        </section>
+
+          <section id="bluebox3">
+            <br><br>
+            <h12> Got it! <span id="bold"></span></h12> 
+            <h15> Keep it up! </h15>
+            <button class="button3" onclick="button3()"> Add New Activity </button>
+          </section>          
+      </div>
+
+      <div class="boxes">
+        <h13> Future Plans </h13>
+          <section id ="greybox">
+            <button class="button2" onclick="button2()"> Add New Activity </button>
+          </section>
+          
+          <section id ="greybox2">
+            <div class="row">
+              <div class="column">
+                <h6> Date </h6>
+                <input id="date-id2" class="datestyle2" type="date" onchange="change2()">
+              </div>
+              <h7> Activity </h7>
+              <div class="selectstyle2">
+                <select id="select-id2" onchange="change2()">
+                  <option value ="Walk"> Walk</option> 
+                  <option value ="Run"> Run</option> 
+                  <option value ="Swim"> Swim</option> 
+                  <option value ="Bike"> Bike</option> 
+                  <option value ="Yoga"> Yoga</option> 
+                  <option value ="Soccer"> Soccer</option> 
+                  <option value ="Basketball"> Basketball</option> 
+                </select>
+              </div>
+              <div class="column">
+                <button id="submit-button2" class="submit2" onclick="submit2()"> Submit </button>
+              </div>
+            </div>
+          </section>
+
+          <section id="greybox3">
+            <br><br>
+            <h14> Sounds good! Don't forget to come back to update your session for
+            <span id="bold2"></span></h14>
+            <button class="button4" onclick="button4()"> Add New Activity </button>
+          </section>
+      </div>
+    </main>
+  </BODY>
+</html>
